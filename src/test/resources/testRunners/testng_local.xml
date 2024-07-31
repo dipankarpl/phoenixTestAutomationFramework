@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="phoenix automation suite" thread-count="5" parallel="tests">
+
+	<test thread-count="5" name="edgeTest" parallel="methods">
+		<parameter name="browser" value="edge"></parameter>
+		<packages>
+			<package name="com.selenium.pom.tests" />
+		</packages>
+	</test>
+
+	<test thread-count="5" name="chromeTest" parallel="methods">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.selenium.pom.tests.FDTest" />
+			<class name="com.selenium.pom.tests.SUPTest" />
+		</classes>
+	</test>
+
+</suite> 
