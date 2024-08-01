@@ -39,7 +39,7 @@ public class BaseTest {
 	}
 
 	@Parameters({ "os", "browser", "execution_mode" })
-	@BeforeMethod
+	@BeforeMethod(groups = { "smoke", "regression" })
 	public void startDriver(@Optional String os, @Optional String browser, @Optional String execution_mode)
 			throws MalformedURLException {
 
@@ -117,7 +117,7 @@ public class BaseTest {
 
 	}
 
-	@AfterMethod
+	@AfterMethod(groups = { "smoke", "regression" })
 	/*
 	 * public void tearDown(@Optional String browser, ITestResult result) throws
 	 * IOException { String timeStamp = new
